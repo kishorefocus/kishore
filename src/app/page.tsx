@@ -13,7 +13,7 @@ export default function Home() {
     <main className="relative z-10">
       <Navbar />
       <Hero />
-      <TechMarquee />
+      {/* <TechMarquee /> */}
       <About />
       <Experience />
       <Projects />
