@@ -15,6 +15,7 @@ import {
   FiGithub,
   FiLinkedin,
   FiMail,
+  FiMenu,
 } from "react-icons/fi";
 import { useBooking } from "@/context/BookingContext";
 
@@ -109,28 +110,16 @@ export default function Navbar() {
             {/* Mobile hamburger button on the left side of header */}
             <motion.button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl glass border border-white/10 hover:border-cyber-blue/40 text-ghost-white focus:outline-none focus:ring-2 focus:ring-cyber-blue/50 transition-colors"
+              className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl glass border border-white/20 hover:border-cyber-blue/50 text-ghost-white focus:outline-none focus:ring-2 focus:ring-cyber-blue/50 transition-all bg-white/[0.04]"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
               whileTap={{ scale: 0.92 }}
             >
-              <div className="w-5 h-4 flex flex-col justify-between items-center relative">
-                <motion.span
-                  animate={menuOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-                  transition={{ duration: 0.25 }}
-                  className="w-5 h-[2px] bg-ghost-white rounded-full block origin-center"
-                />
-                <motion.span
-                  animate={menuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
-                  transition={{ duration: 0.2 }}
-                  className="w-5 h-[2px] bg-ghost-white rounded-full block"
-                />
-                <motion.span
-                  animate={menuOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-                  transition={{ duration: 0.25 }}
-                  className="w-5 h-[2px] bg-ghost-white rounded-full block origin-center"
-                />
-              </div>
+              {menuOpen ? (
+                <FiX size={22} className="text-cyber-blue" />
+              ) : (
+                <FiMenu size={22} className="text-ghost-white" />
+              )}
             </motion.button>
 
             {/* Logo */}
@@ -184,11 +173,11 @@ export default function Navbar() {
             {/* Quick action button on mobile */}
             <motion.button
               onClick={() => openBooking()}
-              className="md:hidden flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-ghost-white rounded-lg glass border border-cyber-blue/30 hover:border-cyber-blue hover:text-cyber-blue transition-all"
+              className="md:hidden flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-ghost-white rounded-lg glass border border-cyber-blue/40 hover:border-cyber-blue hover:text-cyber-blue transition-all"
               whileTap={{ scale: 0.95 }}
             >
               <FiCalendar size={13} className="text-cyber-blue" />
-              <span>Book</span>
+              <span>Book Appointment</span>
             </motion.button>
 
             {/* Desktop buttons */}
@@ -198,7 +187,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.95 }}
             >
-              <FiCalendar size={14} className="text-cyber-blue" /> Book a Call
+              <FiCalendar size={14} className="text-cyber-blue" /> Book Appointment
             </motion.button>
             <motion.button
               onClick={() => scrollTo("#contact")}
@@ -317,7 +306,7 @@ export default function Navbar() {
                   className="w-full py-2.5 px-4 rounded-xl text-sm font-medium text-ghost-white glass border border-cyber-blue/30 hover:border-cyber-blue flex items-center justify-center gap-2 transition-all"
                 >
                   <FiCalendar size={15} className="text-cyber-blue" />
-                  <span>Book a 1:1 Call</span>
+                  <span>Book Appointment</span>
                 </motion.button>
 
                 <motion.button

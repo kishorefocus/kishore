@@ -327,7 +327,7 @@ Please review and send the Google Meet invitation link to ${email}!`,
               <div>
                 <div className="flex items-center gap-2">
                   <h2 className="text-lg sm:text-xl font-bold text-ghost-white">
-                    Book a Call with Kishore
+                    Book Appointment with Kishore
                   </h2>
                   <span className="hidden sm:inline-block text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-cyber-blue/10 text-cyber-blue border border-cyber-blue/30 font-semibold">
                     1-on-1 Video Call

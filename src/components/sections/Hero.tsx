@@ -229,7 +229,7 @@ function HeroAiChat() {
       {/* Chat messages viewport */}
       <div
         ref={messagesContainerRef}
-        className="relative z-10 my-4 h-[280px] sm:h-[320px] lg:h-[340px] xl:h-[370px] overflow-y-auto pr-1 space-y-3.5 scrollbar-thin"
+        className="relative z-10 my-3 sm:my-4 h-[240px] sm:h-[290px] lg:h-[340px] xl:h-[370px] overflow-y-auto pr-1 space-y-3.5 scrollbar-thin"
       >
         {messages.map((msg, i) => (
           <motion.div
@@ -369,7 +369,7 @@ export default function Hero() {
     <section
       id="home"
       ref={sectionRef}
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16 lg:py-0"
+      className="relative w-full min-h-screen flex items-center justify-center pt-24 pb-20 sm:pb-28 lg:py-0"
     >
       {/* ── Ambient gradient background ─────────────────────────────────── */}
       <div className="absolute inset-0 bg-dark-gradient" />
@@ -377,9 +377,8 @@ export default function Hero() {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyber-blue/10 rounded-full blur-[140px] pointer-events-none" />
 
       {/* ── Content Grid: Two Unique Boxes (Left: Profile/Details/Stats/Image, Right: Chatbot) ── */}
-      <motion.div
-        style={{ translateY }}
-        className="relative z-10 container-max w-full px-4 sm:px-6 pt-12 lg:pt-20 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch justify-items-center lg:justify-items-stretch"
+      <div
+        className="relative z-10 container-max w-full px-4 sm:px-6 pt-6 sm:pt-12 lg:pt-20 pb-8 sm:pb-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch justify-items-center lg:justify-items-stretch"
       >
         {/* ── Left Box: Profile, Identity, Stats & Actions (inspired by Image 2) ── */}
         <motion.div
@@ -593,10 +592,10 @@ export default function Hero() {
         </motion.div>
 
         {/* ── Right Box: ONLY Hero AI Chat Widget ── */}
-        <div className="lg:col-span-5 flex flex-col h-full w-full max-w-lg lg:max-w-none mx-auto">
+        <div className="lg:col-span-5 flex flex-col h-full w-full max-w-lg lg:max-w-none mx-auto mb-8 lg:mb-0">
           <HeroAiChat />
         </div>
-      </motion.div>
+      </div>
 
       {/* ── Scroll indicator ─────────────────────────────────────────────── */}
       <motion.button
@@ -604,7 +603,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.8, duration: 0.6 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5 text-ghost-white/30 hover:text-cyber-blue transition-colors cursor-pointer"
+        className="hidden lg:flex absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex-col items-center gap-1.5 text-ghost-white/30 hover:text-cyber-blue transition-colors cursor-pointer"
         aria-label="Scroll to About"
       >
         <span className="text-[11px] tracking-widest uppercase font-mono">Scroll</span>
