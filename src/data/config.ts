@@ -1,11 +1,11 @@
 export const siteConfig = {
   name: "Kishore",
   fullName: "Kishore C",
-  title: "AI Full Stack Developer",
-  tagline: "I build AI-powered products — from pixel to production.",
-  bio: "I'm a frontend-first engineer with 5+ years building scalable web products. Today I build AI agents, RAG pipelines, real-time voice/video platforms (LiveKit, WebRTC), and FastAPI backends that go from prototype to production. I care deeply about clean architecture, great UX, and shipping fast.",
+  title: "AI Full Stack & Mobile Developer",
+  tagline: "I build AI-powered web & mobile products — from pixel to production.",
+  bio: "I'm a full-stack & mobile engineer with 5+ years building scalable web and cross-platform mobile products with React Native. Today I build AI agents, RAG pipelines, real-time voice/video platforms (LiveKit, WebRTC), and robust FastAPI/Node.js backends that go from prototype to production. I care deeply about clean architecture, great UX, and shipping fast across web and mobile.",
   bioLine2:
-    "Currently at Articence, architecting an AI-powered call center platform — real-time WebSocket streams, role-based dashboards, and LLM-driven conversation analysis. Previously built e-learning infra at iLearningEngines serving thousands of students.",
+    "Currently at Articence, architecting an AI-powered call center platform — real-time WebSocket streams, role-based dashboards, and LLM-driven conversation analysis. Also built full-stack healthcare ecosystems (Next.js web portal & React Native mobile app) and e-learning infra at iLearningEngines serving thousands of students.",
   location: "Palakkad, Kerala, India",
   phone: "+919048898225",
   yearsExperience: 5,
@@ -83,9 +83,12 @@ export const siteConfig = {
     { name: "MUI", category: "Frontend", tooltip: "Themed MUI for Articence enterprise app" },
     { name: "Redux / Zustand", category: "Frontend", tooltip: "Global state in multi-role dashboards" },
     { name: "TanStack Query", category: "Frontend", tooltip: "v5 — caching, optimistic updates" },
-    { name: "React Native", category: "Frontend", tooltip: "Clinic Management mobile app" },
     { name: "Framer Motion", category: "Frontend", tooltip: "3D hero, scroll animations on this site" },
     { name: "Three.js / R3F", category: "Frontend", tooltip: "Neural-network particle field on this site" },
+    // Mobile
+    { name: "React Native", category: "Mobile", tooltip: "Cross-platform iOS & Android mobile apps, Clinic Management" },
+    { name: "Expo / CLI", category: "Mobile", tooltip: "Native device APIs, push notifications, offline storage" },
+    { name: "Mobile UI / UX", category: "Mobile", tooltip: "Responsive mobile patterns, gestures, navigation" },
     // Backend & DB
     { name: "Node.js", category: "Backend", tooltip: "REST APIs, WebSocket servers, auth" },
     { name: "Python", category: "Backend", tooltip: "AI pipelines, FastAPI, data extraction" },
@@ -122,10 +125,10 @@ export const siteConfig = {
 
   // ── Tech marquee strip ───────────────────────────────────────────────────────
   techMarquee: [
-    "React.js", "Next.js 14", "TypeScript", "Python", "FastAPI",
+    "React.js", "React Native", "Next.js 14", "TypeScript", "Python", "FastAPI",
     "Anthropic Claude", "Google Gemini", "RAG", "AI Agents",
-    "PostgreSQL", "Redis", "Docker", "AWS", "LiveKit", "WebRTC",
-    "Three.js", "Framer Motion", "Tailwind CSS", "Node.js", "Vercel",
+    "PostgreSQL", "MySQL", "Redis", "Docker", "AWS", "LiveKit", "WebRTC",
+    "Three.js", "Framer Motion", "Tailwind CSS", "Node.js", "iOS / Android", "Vercel",
   ],
 };
 

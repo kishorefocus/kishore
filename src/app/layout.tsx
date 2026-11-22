@@ -33,11 +33,15 @@ const siteUrl = "https://kishore-portfolio-k36z.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Kishore C — AI Full Stack Developer",
+  title: "Kishore C — AI Full Stack & Mobile Developer",
   description:
-    "Portfolio of Kishore C, an AI Full Stack Developer with 5+ years of experience building AI agents, RAG pipelines, real-time platforms, and scalable Next.js/FastAPI products.",
+    "Portfolio of Kishore C, an AI Full Stack & Mobile Developer with 5+ years of experience building AI agents, React Native mobile apps, RAG pipelines, real-time platforms, and scalable Next.js/FastAPI products.",
   keywords: [
     "AI Full Stack Developer",
+    "React Native",
+    "Mobile App Developer",
+    "iOS",
+    "Android",
     "React",
     "Next.js",
     "FastAPI",
@@ -61,18 +65,18 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Kishore C — AI Full Stack Developer",
+    title: "Kishore C — AI Full Stack & Mobile Developer",
     description:
-      "5+ years · AI agents · RAG pipelines · real-time platforms · Next.js / FastAPI. Interactive portfolio with immersive WebGL 3D environments.",
+      "5+ years · AI agents · React Native mobile & web apps · RAG pipelines · real-time platforms · Next.js / FastAPI. Interactive portfolio with immersive WebGL 3D environments.",
     type: "website",
     locale: "en_IN",
     url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kishore C — AI Full Stack Developer",
+    title: "Kishore C — AI Full Stack & Mobile Developer",
     description:
-      "5+ years building AI-powered products from pixel to production. Explore my portfolio.",
+      "5+ years building AI-powered web & mobile products from pixel to production. Explore my portfolio.",
   },
 };
 
@@ -80,7 +84,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Kishore C",
-  jobTitle: "AI Full Stack Developer",
+  jobTitle: "AI Full Stack & Mobile Developer",
   url: siteUrl,
   sameAs: [
     "https://github.com/KishoreReact",
@@ -94,6 +98,7 @@ const jsonLd = {
   },
   knowsAbout: [
     "React.js",
+    "React Native",
     "Next.js",
     "AI Agents",
     "RAG Pipelines",

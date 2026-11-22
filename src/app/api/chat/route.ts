@@ -6,19 +6,20 @@ Your purpose is to answer questions about Kishore C accurately, concisely, and p
 
 ## Profile of Kishore C:
 - Name: Kishore C
-- Title: AI Full Stack Developer
+- Title: AI Full Stack & Mobile Developer
 - Location: Palakkad, Kerala, India
 - Email: kishorekichan12@gmail.com | Phone: +91 9048898225
-- Experience: 5+ Years in Full-Stack & AI Engineering
+- Experience: 5+ Years in Full-Stack, Mobile (React Native), & AI Engineering
 - Current Role: Senior Frontend Developer at Articence Inc (Aug 2024 – Present)
 - GitHub: https://github.com/KishoreReact
 - LinkedIn: https://www.linkedin.com/in/kishore-c-95742712a/
 
 ## Core Highlights & Metrics:
-- 5+ Years Experience (Frontend-first engineer turned AI builder)
+- 5+ Years Experience (Frontend-first engineer turned AI & cross-platform mobile builder)
 - 10+ Production Projects Shipped
 - 3 AI-Powered Platforms in production
 - 15+ Core Technologies mastered
+- Mobile App Development: Ships cross-platform iOS & Android mobile apps using React Native with the same backend technologies (Node.js, Python, FastAPI, PostgreSQL, MySQL, Redis, AWS).
 
 ## Work History:
 1. Articence Inc (Aug 2024 – Present) | Senior Frontend Developer
@@ -33,20 +34,22 @@ Your purpose is to answer questions about Kishore C accurately, concisely, and p
 3. Toplights Labels (Nov 2020 – Apr 2021) | Back Office Executive
    - Technical support and ReactJS label-selector tool cutting operational time by 40%.
 
-## Featured AI & Full-Stack Projects:
+## Featured AI, Full-Stack & Mobile Projects:
 1. GlobalReach — B2B Lead Discovery & Outreach CRM (Live: https://www.getyourclientsb2b.com/)
    - Enterprise B2B platform with PostGIS geo-filtering, Elasticsearch full-text search, Redis real-time pipeline, and FastAPI backend with Next.js 14.
 2. AI Marketing Automation Platform (Live: https://growth.getyourclientsb2b.com/)
    - Autonomous multi-channel B2B marketing engine with FastAPI, Pydantic v2, SQLAlchemy 2.0, TanStack Query v5, and Recharts.
 3. VOC AI Call Center (Live: https://demo.articence.com/)
    - Enterprise AI calling and speech analysis platform at Articence.
-4. Dynamic Online Learning Platform (Live: https://production.aaisolutions.dev/login)
-5. Clinic Management Web & Mobile App (Live: https://clinicmanagement.sitemanagershub.com/login)
+4. Clinic Management Web & Mobile App (Live: https://clinicmanagement.sitemanagershub.com/login)
+   - Cross-platform clinic management ecosystem: responsive Next.js web application for managers and doctors, companion React Native mobile app for iOS and Android, sharing Node.js + MySQL REST APIs.
+5. Dynamic Online Learning Platform (Live: https://production.aaisolutions.dev/login)
 6. E-Commerce Web App (Live: https://shop.gsgroup.co/login)
 7. MediSearch E-Medicine App (Live: https://cappsule.vercel.app/)
 
 ## Tech Stack:
-- Frontend: React.js, Next.js 14, TypeScript, Tailwind CSS, MUI, Redux, TanStack Query, Framer Motion, Three.js/R3F, React Native.
+- Mobile: React Native (iOS & Android), Expo / CLI, Mobile UI/UX, Device APIs.
+- Frontend: React.js, Next.js 14, TypeScript, Tailwind CSS, MUI, Redux, TanStack Query, Framer Motion, Three.js/R3F.
 - Backend & DB: Python, FastAPI, Node.js, WebSockets, REST APIs, PostgreSQL, PostGIS, Redis, Elasticsearch, MySQL, MongoDB.
 - AI & ML: Google Gemini, Anthropic Claude API, RAG Pipelines, AI Agents, Prompt Engineering, Guardrails, Evals.
 - Real-time: WebRTC, LiveKit, VoIP, OAuth2, Azure MSAL.
@@ -60,8 +63,17 @@ Your purpose is to answer questions about Kishore C accurately, concisely, and p
 // Smart local fallback if API key is not yet set or rate-limited
 function getGroundedLocalResponse(query: string): string {
   const q = query.toLowerCase();
+  if (q.includes("mobile") || q.includes("react native") || q.includes("ios") || q.includes("android") || q.includes("app")) {
+    return "Yes! Kishore builds cross-platform mobile apps for iOS and Android using React Native alongside the same backend technologies (Node.js, FastAPI, PostgreSQL/MySQL). He developed the complete Clinic Management web and mobile application ecosystem!";
+  }
+  if (q.includes("clinic")) {
+    return "Kishore built the full-stack Clinic Management ecosystem consisting of both a Next.js web portal and a React Native mobile application for appointments, patient records, and doctor workflows, backed by Node.js and MySQL.";
+  }
   if (q.includes("project") || q.includes("built") || q.includes("work")) {
-    return "Kishore has shipped 10+ projects! Key featured AI platforms include:\n• GlobalReach: B2B Lead Discovery CRM with Next.js 14, FastAPI, PostGIS & Elasticsearch.\n• AI Marketing Automation Platform: Autonomous multi-channel growth engine.\n• VOC Call Center: Real-time AI agent & audio analysis built at Articence.\nCheck the Projects section for live demos!";
+    return "Kishore has shipped 10+ projects across AI, Web, and Mobile! Key featured platforms include:\n• GlobalReach: B2B Lead Discovery CRM with Next.js 14, FastAPI & PostGIS.\n• AI Marketing Automation Platform: Multi-channel growth engine.\n• VOC Call Center: Real-time speech AI at Articence.\n• Clinic Management: Next.js web portal & React Native mobile app.\nCheck the Projects section for live demos!";
+  }
+  if (q.includes("skill") || q.includes("stack") || q.includes("tech")) {
+    return "Kishore's core stack covers:\n• Mobile: React Native (iOS & Android), Expo\n• Frontend: Next.js 14, React, TypeScript, Tailwind CSS, Three.js\n• Backend & AI: Python, FastAPI, Node.js, Google Gemini, Anthropic Claude, RAG, AI Agents\n• DB & Real-time: PostgreSQL, PostGIS, MySQL, Redis, WebSockets, LiveKit, WebRTC\n• Cloud: Docker, AWS, Vercel.";
   }
   if (q.includes("skill") || q.includes("stack") || q.includes("tech")) {
     return "Kishore's core stack covers:\n• Frontend: Next.js 14, React, TypeScript, Tailwind CSS, Three.js\n• Backend & AI: Python, FastAPI, Google Gemini, Anthropic Claude, RAG, AI Agents\n• DB & Real-time: PostgreSQL, PostGIS, Redis, WebSockets, LiveKit, WebRTC\n• Cloud: Docker, AWS, Vercel.";

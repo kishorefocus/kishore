@@ -115,7 +115,7 @@ function ProjectDetail({
           {project.featured && (
             <div className="absolute top-3 left-3 flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-gradient-to-r from-cyber-blue to-neon-violet text-obsidian">
               <FiStar size={10} />
-              Featured
+              {project.tags?.includes("Mobile") ? "Featured Web & Mobile" : "Featured"}
             </div>
           )}
 
@@ -253,7 +253,7 @@ function ProjectCard({
         {project.featured && (
           <div className="absolute top-2.5 left-2.5 flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-gradient-to-r from-cyber-blue to-neon-violet text-obsidian">
             <FiStar size={9} />
-            Featured AI
+            {project.tags?.includes("Mobile") ? "Featured Web & Mobile" : "Featured AI"}
           </div>
         )}
       </div>
@@ -337,7 +337,7 @@ export default function Projects() {
           label="My Work"
           title="Featured"
           highlight="Projects"
-          description="AI-powered platforms to full-stack web apps — built, shipped, and live in production."
+          description="AI-powered platforms, cross-platform mobile apps, and scalable full-stack web applications — built, shipped, and live in production."
         />
 
         {/* Featured label */}
@@ -348,7 +348,7 @@ export default function Projects() {
           className="flex items-center gap-3 mb-6"
         >
           <span className="flex items-center gap-1.5 text-xs font-semibold text-cyber-blue uppercase tracking-widest">
-            <FiStar size={12} /> AI Projects
+            <FiStar size={12} /> Featured Projects
           </span>
           <div className="flex-1 h-px bg-gradient-to-r from-cyber-blue/30 to-transparent" />
         </motion.div>

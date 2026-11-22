@@ -8,19 +8,20 @@ import {
   SiReact, SiNextdotjs, SiTypescript, SiJavascript, SiTailwindcss, SiCss,
   SiRedux, SiNodedotjs, SiPython, SiFastapi, SiPostgresql, SiMysql, SiRedis,
   SiMongodb, SiElasticsearch, SiDocker, SiVercel, SiGithub, SiLinux,
-  SiReactos,
+  SiReactos, SiExpo,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
-import { FiCpu, FiZap, FiDatabase, FiCode, FiServer, FiRadio } from "react-icons/fi";
-import { TbBrandFramerMotion } from "react-icons/tb";
+import { FiCpu, FiZap, FiDatabase, FiCode, FiServer, FiRadio, FiSmartphone } from "react-icons/fi";
+import { TbBrandFramerMotion, TbBrandReactNative } from "react-icons/tb";
 
-type SkillCategory = "All" | "Frontend" | "Backend" | "Database" | "AI & ML" | "Real-time" | "DevOps";
+type SkillCategory = "All" | "Frontend" | "Mobile" | "Backend" | "Database" | "AI & ML" | "Real-time" | "DevOps";
 
-const categories: SkillCategory[] = ["All", "Frontend", "Backend", "Database", "AI & ML", "Real-time", "DevOps"];
+const categories: SkillCategory[] = ["All", "Frontend", "Mobile", "Backend", "Database", "AI & ML", "Real-time", "DevOps"];
 
 const categoryIcons: Record<SkillCategory, React.ElementType> = {
   All: FiZap,
   Frontend: FiCode,
+  Mobile: FiSmartphone,
   Backend: FiServer,
   Database: FiDatabase,
   "AI & ML": FiCpu,
@@ -31,6 +32,7 @@ const categoryIcons: Record<SkillCategory, React.ElementType> = {
 const categoryColors: Record<SkillCategory, string> = {
   All: "text-cyber-blue",
   Frontend: "text-cyan-400",
+  Mobile: "text-sky-400",
   Backend: "text-emerald-400",
   Database: "text-violet-400",
   "AI & ML": "text-pink-400",
@@ -49,7 +51,9 @@ const skillIcons: IconMap = {
   "SCSS / CSS": SiCss as React.ComponentType<{ size?: number; color?: string; className?: string }>,
   "Redux / Zustand": SiRedux,
   "TanStack Query": SiReactos,
-  "React Native": SiReact,
+  "React Native": TbBrandReactNative as unknown as React.ComponentType<{ size?: number; color?: string; className?: string }>,
+  "Expo / CLI": SiExpo,
+  "Mobile UI / UX": FiSmartphone,
   "Node.js": SiNodedotjs,
   "Python": SiPython,
   "FastAPI": SiFastapi,
@@ -66,6 +70,9 @@ const skillIcons: IconMap = {
 
 const iconColors: Record<string, string> = {
   "React.js": "#61DAFB",
+  "React Native": "#61DAFB",
+  "Expo / CLI": "#ffffff",
+  "Mobile UI / UX": "#38BDF8",
   "Next.js 14": "#ffffff",
   "TypeScript": "#3178C6",
   "JavaScript": "#F7DF1E",

@@ -99,12 +99,12 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Clinic Management Web & Mobile App",
+    title: "Clinic Management — Web & Mobile App Ecosystem",
     shortDescription:
-      "Cross-platform clinic operations app for appointments, staff, and patient records.",
+      "Cross-platform clinic ecosystem featuring a Next.js web application and React Native mobile app.",
     description:
-      "Full-stack clinic management system with separate dashboards for managers, doctors, and patients. Handles appointment scheduling, consultation tracking, staff management, and patient records. Mobile companion built with React Native.",
-    technologies: ["Next.js", "React Native", "Node.js", "MySQL", "JavaScript"],
+      "Comprehensive healthcare operations ecosystem engineered for multi-role workflows. Features dedicated responsive web dashboards for clinic administrators and doctors alongside a companion cross-platform mobile application built with React Native for patients and staff. Handles real-time appointment scheduling, consultation tracking, duty rosters, patient medical records, and digital prescriptions. Powered by a shared Node.js and MySQL REST API architecture with JWT authentication.",
+    technologies: ["React Native", "Next.js", "Node.js", "MySQL", "REST APIs", "Tailwind CSS", "TypeScript"],
     src: "/images/projectsImages/clinic1.png",
     images: [
       "/images/projectsImages/cliniclogin.png",
@@ -113,9 +113,9 @@ const projects: Project[] = [
     ],
     demo: "https://clinicmanagement.sitemanagershub.com/login",
     githubOwned: false,
-    featured: false,
-    outcome: "Streamlined multi-role clinic ops across web and mobile.",
-    tags: ["Healthcare", "Mobile", "Full-Stack"],
+    featured: true,
+    outcome: "Unified web & React Native mobile platform streamlining multi-role clinic operations.",
+    tags: ["Healthcare", "Mobile", "Web", "Full-Stack"],
   },
   {
     id: 5,

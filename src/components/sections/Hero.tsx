@@ -13,9 +13,10 @@ import { useBooking } from "@/context/BookingContext";
 // ── Typewriter / rotating-word effect ──────────────────────────────────────
 const rotatingWords = [
   "AI Agents",
-  "RAG Systems",
+  "React Native Apps",
   "Scalable Web Apps",
-  "Real-time Platforms",
+  "RAG Systems",
+  "Web & Mobile Platforms",
 ];
 
 function RotatingTypewriter() {
@@ -107,7 +108,8 @@ interface ChatMessage {
 }
 
 const HERO_SUGGESTIONS = [
-  "Featured AI Projects",
+  "Featured Projects",
+  "React Native & Mobile",
   "Core Tech Stack",
   "Role at Articence",
 ];
@@ -117,7 +119,7 @@ function HeroAiChat() {
     {
       role: "assistant",
       content:
-        "Hi! 👋 I'm Kishore's AI assistant powered by Gemini. Ask me about his AI agent architecture, RAG systems, or full-stack production apps!",
+        "Hi! 👋 I'm Kishore's AI assistant powered by Gemini. Ask me about his AI agent architecture, React Native mobile apps, RAG systems, or full-stack production platforms!",
     },
   ]);
   const [input, setInput] = useState("");

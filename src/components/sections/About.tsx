@@ -287,9 +287,9 @@ export default function About() {
       desc: "Architected AI-powered call center platform with role-based access, WebSockets & LiveKit real-time agents.",
     },
     {
-      category: "FULL STACK",
-      company: "iLearningEngines",
-      desc: "Built scalable enterprise e-learning platforms, assessment portals, and Node.js + PostgreSQL backend engines.",
+      category: "FULL STACK & MOBILE",
+      company: "Web & Mobile Ecosystems",
+      desc: "Delivered e-learning portals at iLearningEngines and complete Clinic Management with Next.js & React Native.",
     },
     {
       category: "PRODUCTION SHIPPED",
@@ -307,7 +307,7 @@ export default function About() {
           label="Who I Am"
           title="About"
           highlight="Me"
-          description="Frontend-first engineer turned AI builder. 5+ years shipping scalable products that work beautifully at any scale."
+          description="Frontend-first engineer turned AI & cross-platform mobile builder. 5+ years shipping scalable web products, React Native mobile apps, and production backends."
         />
 
         {/* ── 3-Column Bento Grid Structure matching user reference image ── */}
@@ -324,7 +324,7 @@ export default function About() {
               </h2>
               <div className="w-8 h-0.5 bg-gradient-to-r from-cyber-blue to-neon-violet my-2 rounded-full" />
               <p className="text-[11px] sm:text-xs font-mono tracking-[0.25em] text-ghost-white/50 uppercase">
-                AI Full Stack Developer
+                AI Full Stack & Mobile Developer
               </p>
             </BentoCard>
           </div>
@@ -399,7 +399,7 @@ export default function About() {
                   <span className="w-1.5 h-1.5 rounded-full bg-cyber-blue animate-pulse" />
                   Kishore C
                 </span>
-                <span className="text-cyber-blue font-semibold text-[10px]">Senior AI & Frontend</span>
+                <span className="text-cyber-blue font-semibold text-[10px]">Senior AI & Mobile Full-Stack</span>
               </div>
             </div>
 
