@@ -206,7 +206,7 @@ function HeroAiChat() {
                 <BsStars size={10} /> Live
               </span>
             </div>
-            <p className="text-[11px] text-ghost-white/40 flex items-center gap-1 font-mono">
+            <p className="text-[11px] text-ghost-white/40 flex flex-wrap items-center gap-1 font-mono">
               Powered by <span className="text-cyber-blue/80 font-medium">Gemini</span> · Grounded in Resume
             </p>
           </div>
@@ -369,7 +369,7 @@ export default function Hero() {
     <section
       id="home"
       ref={sectionRef}
-      className="relative w-full min-h-screen flex items-center overflow-hidden pt-20 pb-16 lg:py-0"
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16 lg:py-0"
     >
       {/* ── Ambient gradient background ─────────────────────────────────── */}
       <div className="absolute inset-0 bg-dark-gradient" />
@@ -379,14 +379,14 @@ export default function Hero() {
       {/* ── Content Grid: Two Unique Boxes (Left: Profile/Details/Stats/Image, Right: Chatbot) ── */}
       <motion.div
         style={{ translateY }}
-        className="relative z-10 container-max w-full px-4 sm:px-6 pt-12 lg:pt-20 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch"
+        className="relative z-10 container-max w-full px-4 sm:px-6 pt-12 lg:pt-20 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch justify-items-center lg:justify-items-stretch"
       >
         {/* ── Left Box: Profile, Identity, Stats & Actions (inspired by Image 2) ── */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.7, ease: "easeOut" }}
-          className="lg:col-span-7 relative w-full glass gradient-border rounded-3xl p-5 sm:p-6 lg:p-7 shadow-2xl backdrop-blur-2xl overflow-hidden border border-cyber-blue/20 flex flex-col justify-between gap-5 sm:gap-6"
+          className="lg:col-span-7 relative w-full max-w-lg lg:max-w-none mx-auto glass gradient-border rounded-3xl p-4 sm:p-6 lg:p-7 shadow-2xl backdrop-blur-2xl overflow-hidden border border-cyber-blue/20 flex flex-col justify-between gap-5 sm:gap-6"
           style={{
             boxShadow:
               "0 20px 60px -15px rgba(0, 240, 255, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.08)",
@@ -397,9 +397,9 @@ export default function Hero() {
           <div className="absolute -bottom-24 -right-24 w-60 h-60 bg-neon-violet/15 rounded-full blur-3xl pointer-events-none" />
 
           {/* Top Row: Sub-panel with Photo + Location (Left) and Name + Craft + Tech (Right) */}
-          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-12 gap-5 sm:gap-6 items-start">
+          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-12 gap-5 sm:gap-6 items-start w-full">
             {/* Left Sub-Column: Photo & Location Card (inspired by Image 2) */}
-            <div className="sm:col-span-5 flex flex-col gap-3">
+            <div className="sm:col-span-5 flex flex-col gap-3 w-full">
               {/* Profile Photo */}
               <div className="relative w-full aspect-[4/5] sm:aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-xl group bg-obsidian/60">
                 <Image
@@ -420,7 +420,7 @@ export default function Hero() {
               </div>
 
               {/* Location & Timezone Card (direct match to Image 2 style) */}
-              <div className="relative rounded-2xl p-3 sm:p-3.5 glass border border-border-glass bg-obsidian/50 overflow-hidden flex flex-col justify-between">
+              <div className="relative w-full rounded-2xl p-3 sm:p-3.5 glass border border-border-glass bg-obsidian/50 overflow-hidden flex flex-col justify-between">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-neon-violet/15 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-cyber-blue to-neon-violet" />
 
@@ -445,7 +445,7 @@ export default function Hero() {
             </div>
 
             {/* Right Sub-Column: Identity, Craft, Tagline & Tech Stack */}
-            <div className="sm:col-span-7 flex flex-col justify-between space-y-3.5">
+            <div className="sm:col-span-7 flex flex-col justify-between space-y-3.5 w-full">
               <div>
                 {/* Available status badge */}
                 <div className="inline-flex items-center gap-2 px-3 py-1 glass border border-cyber-blue/30 rounded-full text-[11px] font-semibold text-cyber-blue tracking-wider uppercase mb-2">
@@ -593,7 +593,7 @@ export default function Hero() {
         </motion.div>
 
         {/* ── Right Box: ONLY Hero AI Chat Widget ── */}
-        <div className="lg:col-span-5 flex flex-col h-full">
+        <div className="lg:col-span-5 flex flex-col h-full w-full max-w-lg lg:max-w-none mx-auto">
           <HeroAiChat />
         </div>
       </motion.div>

@@ -145,12 +145,12 @@ export default function Skills() {
   );
 
   return (
-    <section id="skills" className="section-padding bg-deep-space/50 relative">
+    <section id="skills" className="section-padding bg-deep-space/50 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border-glass to-transparent" />
       {/* Ambient glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-neon-violet/4 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[600px] h-[300px] bg-neon-violet/4 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="container-max px-6 relative">
+      <div className="container-max px-4 sm:px-6 relative">
         <SectionHeading
           label="Tech Stack"
           title="My"

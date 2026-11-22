@@ -126,13 +126,13 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section-padding relative">
+    <section id="contact" className="section-padding relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border-glass to-transparent" />
 
       {/* Background glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-64 bg-neon-violet/6 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="container-max px-6">
+      <div className="container-max px-4 sm:px-6">
         <SectionHeading
           label="Get In Touch"
           title="Let's"
@@ -140,7 +140,7 @@ export default function Contact() {
           description="Have a project in mind or want to collaborate? I'd love to hear from you."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start max-w-lg lg:max-w-none mx-auto">
           {/* Left: info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

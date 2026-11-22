@@ -302,10 +302,10 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="section-padding bg-deep-space/50 relative">
+    <section id="about" className="section-padding bg-deep-space/50 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border-glass to-transparent" />
 
-      <div className="container-max px-6">
+      <div className="container-max px-4 sm:px-6">
         <SectionHeading
           label="Who I Am"
           title="About"
@@ -314,7 +314,7 @@ export default function About() {
         />
 
         {/* ── 3-Column Bento Grid Structure matching user reference image ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch max-w-lg lg:max-w-none mx-auto">
           
           {/* ══════════════ ROW 1: TOP ══════════════ */}
 

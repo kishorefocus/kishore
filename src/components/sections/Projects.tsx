@@ -329,10 +329,10 @@ export default function Projects() {
   const ordered = [...featured, ...rest];
 
   return (
-    <section id="projects" className="section-padding relative">
+    <section id="projects" className="section-padding relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border-glass to-transparent" />
 
-      <div className="container-max px-6">
+      <div className="container-max px-4 sm:px-6">
         <SectionHeading
           label="My Work"
           title="Featured"
@@ -353,7 +353,7 @@ export default function Projects() {
           <div className="flex-1 h-px bg-gradient-to-r from-cyber-blue/30 to-transparent" />
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10 max-w-lg sm:max-w-none mx-auto">
           {ordered.map((project, index) => {
             // Add a visual divider label before non-featured items
             if (!project.featured && ordered[index - 1]?.featured) {

@@ -12,7 +12,7 @@ function TimelineCard({ item, index }: { item: ExperienceItem; index: number }) 
   const isLeft = index % 2 === 0;
 
   return (
-    <div className={`relative flex items-start gap-6 ${isLeft ? "flex-row" : "flex-row-reverse"} mb-12`}>
+    <div className={`relative flex items-start gap-4 sm:gap-6 ${isLeft ? "flex-row" : "flex-row-reverse"} mb-12 max-w-xl lg:max-w-none mx-auto`}>
       {/* Content card */}
       <motion.div
         initial={{ opacity: 0, x: isLeft ? -40 : 40 }}
@@ -90,10 +90,10 @@ export default function Experience() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="experience" ref={sectionRef} className="section-padding relative">
+    <section id="experience" ref={sectionRef} className="section-padding relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border-glass to-transparent" />
 
-      <div className="container-max px-6">
+      <div className="container-max px-4 sm:px-6">
         <SectionHeading
           label="Work History"
           title="My"

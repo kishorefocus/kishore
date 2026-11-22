@@ -21,6 +21,13 @@
   padding: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
@@ -30,7 +37,6 @@ body {
   background-color: var(--color-obsidian);
   color: var(--color-ghost-white);
   font-family: var(--font-main);
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

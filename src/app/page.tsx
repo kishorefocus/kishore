@@ -10,7 +10,7 @@ import TechMarquee from "@/components/ui/TechMarquee";
 
 export default function Home() {
   return (
-    <main className="relative z-10">
+    <main className="relative z-10 w-full overflow-x-hidden">
       <Navbar />
       <Hero />
       {/* <TechMarquee /> */}

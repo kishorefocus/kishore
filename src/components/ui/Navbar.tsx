@@ -103,21 +103,51 @@ export default function Navbar() {
             : "bg-transparent py-5"
         }`}
       >
-        <div className="container-max flex items-center justify-between px-6">
-          {/* Logo */}
-          <motion.a
-            href="#home"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollTo("#home");
-            }}
-            className="text-xl font-bold tracking-tight"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span className="gradient-text">{siteConfig.name}</span>
-            <span className="text-ghost-white/30">.</span>
-          </motion.a>
+        <div className="container-max flex items-center justify-between px-4 sm:px-6">
+          {/* Left: Mobile hamburger button + Logo */}
+          <div className="flex items-center gap-3">
+            {/* Mobile hamburger button on the left side of header */}
+            <motion.button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl glass border border-white/10 hover:border-cyber-blue/40 text-ghost-white focus:outline-none focus:ring-2 focus:ring-cyber-blue/50 transition-colors"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
+              whileTap={{ scale: 0.92 }}
+            >
+              <div className="w-5 h-4 flex flex-col justify-between items-center relative">
+                <motion.span
+                  animate={menuOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
+                  transition={{ duration: 0.25 }}
+                  className="w-5 h-[2px] bg-ghost-white rounded-full block origin-center"
+                />
+                <motion.span
+                  animate={menuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-5 h-[2px] bg-ghost-white rounded-full block"
+                />
+                <motion.span
+                  animate={menuOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
+                  transition={{ duration: 0.25 }}
+                  className="w-5 h-[2px] bg-ghost-white rounded-full block origin-center"
+                />
+              </div>
+            </motion.button>
+
+            {/* Logo */}
+            <motion.a
+              href="#home"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo("#home");
+              }}
+              className="text-xl font-bold tracking-tight"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="gradient-text">{siteConfig.name}</span>
+              <span className="text-ghost-white/30">.</span>
+            </motion.a>
+          </div>
 
           {/* Desktop nav links */}
           <ul className="hidden md:flex items-center gap-1">
@@ -149,11 +179,22 @@ export default function Navbar() {
             })}
           </ul>
 
-          {/* Right: Hire Me + Book a Call (Desktop) */}
-          <div className="hidden md:flex items-center gap-2">
+          {/* Right: Actions */}
+          <div className="flex items-center gap-2">
+            {/* Quick action button on mobile */}
             <motion.button
               onClick={() => openBooking()}
-              className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-ghost-white rounded-lg glass border border-cyber-blue/30 hover:border-cyber-blue hover:text-cyber-blue hover:shadow-sm hover:shadow-cyber-blue/30 transition-all"
+              className="md:hidden flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-ghost-white rounded-lg glass border border-cyber-blue/30 hover:border-cyber-blue hover:text-cyber-blue transition-all"
+              whileTap={{ scale: 0.95 }}
+            >
+              <FiCalendar size={13} className="text-cyber-blue" />
+              <span>Book</span>
+            </motion.button>
+
+            {/* Desktop buttons */}
+            <motion.button
+              onClick={() => openBooking()}
+              className="hidden md:flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-ghost-white rounded-lg glass border border-cyber-blue/30 hover:border-cyber-blue hover:text-cyber-blue hover:shadow-sm hover:shadow-cyber-blue/30 transition-all"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -161,40 +202,13 @@ export default function Navbar() {
             </motion.button>
             <motion.button
               onClick={() => scrollTo("#contact")}
-              className="flex items-center gap-2 px-5 py-2 text-sm font-semibold text-obsidian rounded-lg bg-gradient-to-r from-cyber-blue to-neon-violet glow-blue"
+              className="hidden md:flex items-center gap-2 px-5 py-2 text-sm font-semibold text-obsidian rounded-lg bg-gradient-to-r from-cyber-blue to-neon-violet glow-blue"
               whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(0,240,255,0.4)" }}
               whileTap={{ scale: 0.95 }}
             >
               Hire Me
             </motion.button>
           </div>
-
-          {/* Mobile hamburger button */}
-          <motion.button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl glass border border-white/10 hover:border-cyber-blue/40 text-ghost-white focus:outline-none focus:ring-2 focus:ring-cyber-blue/50 transition-colors"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-            whileTap={{ scale: 0.92 }}
-          >
-            <div className="w-5 h-4 flex flex-col justify-between items-center relative">
-              <motion.span
-                animate={menuOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-                transition={{ duration: 0.25 }}
-                className="w-5 h-[2px] bg-ghost-white rounded-full block origin-center"
-              />
-              <motion.span
-                animate={menuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
-                transition={{ duration: 0.2 }}
-                className="w-5 h-[2px] bg-ghost-white rounded-full block"
-              />
-              <motion.span
-                animate={menuOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-                transition={{ duration: 0.25 }}
-                className="w-5 h-[2px] bg-ghost-white rounded-full block origin-center"
-              />
-            </div>
-          </motion.button>
         </div>
       </motion.nav>
 
@@ -213,13 +227,13 @@ export default function Navbar() {
               aria-hidden="true"
             />
 
-            {/* Slide-out Menu Panel */}
+            {/* Slide-out Menu Panel from left */}
             <motion.div
-              initial={{ x: "100%" }}
+              initial={{ x: "-100%" }}
               animate={{ x: 0 }}
-              exit={{ x: "100%" }}
+              exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 28, stiffness: 260 }}
-              className="fixed inset-y-0 right-0 z-50 w-[85vw] max-w-sm bg-[#080811]/95 backdrop-blur-2xl border-l border-white/10 p-6 md:hidden flex flex-col justify-between shadow-2xl overflow-y-auto"
+              className="fixed inset-y-0 left-0 z-50 w-[85vw] max-w-sm bg-[#080811]/98 backdrop-blur-2xl border-r border-white/10 p-6 md:hidden flex flex-col justify-between shadow-2xl overflow-y-auto"
             >
               <div>
                 {/* Header */}
