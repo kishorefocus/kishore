@@ -24,8 +24,11 @@ const projects: Project[] = [
     description:
       "Full-stack enterprise platform built for B2B lead discovery and sales pipeline management. Features geo-aware lead search with PostGIS, full-text search via Elasticsearch, real-time pipeline updates with Redis pub/sub, and a FastAPI backend containerised with Docker.",
     technologies: ["Next.js 14", "TypeScript", "FastAPI", "PostgreSQL", "PostGIS", "Redis", "Elasticsearch", "Docker"],
-    src: "/images/projectsImages/globalreach.svg",
-    images: ["/images/projectsImages/globalreach.svg"],
+    src: "/images/projectsImages/globalreach.png",
+    images: [
+      "/images/projectsImages/globalreach.png",
+      "/images/projectsImages/globalreach/discovery-lead-search.jpg",
+    ],
     demo: "https://www.getyourclientsb2b.com/",
     githubOwned: false,
     featured: true,
@@ -40,8 +43,11 @@ const projects: Project[] = [
     description:
       "AI-powered social media and marketing automation platform. Autonomous multi-channel campaigns, Recharts analytics dashboard, Pydantic v2 data validation, SQLAlchemy 2.0 ORM with Alembic migrations. Integrates with LinkedIn, email, and social APIs for end-to-end B2B outreach automation.",
     technologies: ["Next.js 14", "React 18", "TypeScript", "TailwindCSS", "TanStack Query v5", "FastAPI", "Pydantic v2", "SQLAlchemy", "Alembic"],
-    src: "/images/projectsImages/growth-platform.svg",
-    images: ["/images/projectsImages/growth-platform.svg"],
+    src: "/images/projectsImages/growth-platform.png",
+    images: [
+      "/images/projectsImages/growth-platform.png",
+      "/images/projectsImages/Aimarketing/campaign-mockups.jpg",
+    ],
     demo: "https://growth.getyourclientsb2b.com/",
     githubOwned: false,
     featured: true,
@@ -65,7 +71,7 @@ const projects: Project[] = [
     ],
     demo: "https://demo.articence.com/",
     githubOwned: false,
-    featured: false,
+    featured: true,
     outcome: "Enterprise-grade AI call center deployed on AWS for Articence.",
     tags: ["AI", "Real-time", "Enterprise"],
   },
