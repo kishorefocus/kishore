@@ -90,7 +90,7 @@ const MINDSET_SLIDES: MindsetSlide[] = [
     badge: "CRICKET",
     title: "Match Day Drive",
     tag: "LEAGUE",
-    image: "/images/mindset/cricket.jpg",
+    image: "/images/mindset/cricket.png",
     stats: [
       { label: "Role", value: "All-Rounder" },
       { label: "Focus", value: "Strategy" },
@@ -196,11 +196,10 @@ function MindsetCarousel() {
                 stiffness: 280,
                 damping: 26,
               }}
-              className={`absolute w-44 sm:w-48 h-56 sm:h-60 rounded-2xl overflow-hidden border cursor-pointer select-none transition-shadow duration-300 ${
-                isCenter
-                  ? "border-neon-violet/70 shadow-[0_0_30px_rgba(168,85,247,0.4)]"
-                  : "border-white/20 hover:opacity-85 shadow-lg"
-              }`}
+              className={`absolute w-44 sm:w-48 h-56 sm:h-60 rounded-2xl overflow-hidden border cursor-pointer select-none transition-shadow duration-300 ${isCenter
+                ? "border-neon-violet/70 shadow-[0_0_30px_rgba(168,85,247,0.4)]"
+                : "border-white/20 hover:opacity-85 shadow-lg"
+                }`}
             >
               <Image
                 src={slide.image}
@@ -211,11 +210,10 @@ function MindsetCarousel() {
                 sizes="200px"
               />
               <div
-                className={`absolute inset-0 bg-gradient-to-t pointer-events-none ${
-                  isCenter
-                    ? "from-black/95 via-black/40 to-black/25"
-                    : "from-black/90 via-black/60 to-black/40"
-                }`}
+                className={`absolute inset-0 bg-gradient-to-t pointer-events-none ${isCenter
+                  ? "from-black/95 via-black/40 to-black/25"
+                  : "from-black/90 via-black/60 to-black/40"
+                  }`}
               />
 
               {/* Tag Row */}
@@ -261,11 +259,10 @@ function MindsetCarousel() {
             type="button"
             onClick={() => setIndex(i)}
             aria-label={`Go to slide ${i + 1}`}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
-              i === index
-                ? "w-6 bg-gradient-to-r from-neon-violet to-cyber-blue shadow-[0_0_8px_rgba(0,240,255,0.6)]"
-                : "w-1.5 bg-ghost-white/20 hover:bg-ghost-white/50"
-            }`}
+            className={`h-1.5 rounded-full transition-all duration-300 ${i === index
+              ? "w-6 bg-gradient-to-r from-neon-violet to-cyber-blue shadow-[0_0_8px_rgba(0,240,255,0.6)]"
+              : "w-1.5 bg-ghost-white/20 hover:bg-ghost-white/50"
+              }`}
           />
         ))}
       </div>
@@ -315,16 +312,15 @@ export default function About() {
 
         {/* ── 3-Column Bento Grid Structure matching user reference image ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch max-w-lg lg:max-w-none mx-auto">
-          
+
           {/* ══════════════ ROW 1: TOP ══════════════ */}
 
           {/* Top-Left: Name & Title Card (matches PAWEŁ SZOSTAK card) */}
           <div className="lg:col-span-4 flex">
             <BentoCard delay={0.05} className="w-full flex flex-col justify-center items-center text-center py-8 px-6">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-ghost-white tracking-widest uppercase text-glow-blue">
+              <h2 className="text-2xl sm:text-3xl font-extrabold gradient-text tracking-widest uppercase text-glow-blue">
                 KISHORE
-                <br />
-                <span className="gradient-text">C</span>
+                <span className="gradient-text"> C</span>
               </h2>
               <div className="w-8 h-0.5 bg-gradient-to-r from-cyber-blue to-neon-violet my-2 rounded-full" />
               <p className="text-[11px] sm:text-xs font-mono tracking-[0.25em] text-ghost-white/50 uppercase">
@@ -353,11 +349,10 @@ export default function About() {
                     key={item.category}
                     onMouseEnter={() => setHoveredExperience(idx)}
                     onMouseLeave={() => setHoveredExperience(null)}
-                    className={`rounded-2xl p-3.5 glass border transition-all duration-300 flex flex-col justify-between ${
-                      hoveredExperience === idx
-                        ? "border-cyber-blue/50 bg-cyber-blue/[0.04] scale-[1.02] shadow-lg"
-                        : "border-border-glass bg-obsidian/40 hover:border-white/20"
-                    }`}
+                    className={`rounded-2xl p-3.5 glass border transition-all duration-300 flex flex-col justify-between ${hoveredExperience === idx
+                      ? "border-cyber-blue/50 bg-cyber-blue/[0.04] scale-[1.02] shadow-lg"
+                      : "border-border-glass bg-obsidian/40 hover:border-white/20"
+                      }`}
                   >
                     <div>
                       <span className="text-[9px] font-mono font-bold tracking-widest text-cyber-blue/90 uppercase block mb-1">
@@ -398,7 +393,7 @@ export default function About() {
                 sizes="(max-width: 1024px) 100vw, 400px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian/85 via-transparent to-transparent pointer-events-none" />
-              
+
               <div className="absolute bottom-3 left-3 right-3 px-3 py-1.5 rounded-xl text-[11px] font-mono font-medium bg-obsidian/85 backdrop-blur-md border border-white/10 text-ghost-white flex items-center justify-between">
                 <span className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyber-blue animate-pulse" />
@@ -484,14 +479,14 @@ export default function About() {
                 </div>
 
                 <div className="w-10 h-1 bg-neon-violet rounded-full mb-3" />
-                
+
                 <p className="text-xs text-ghost-white/60 leading-relaxed mb-3">
                   Production AI agent platforms, real-time voice architectures, and high-scale B2B SaaS engines:
                 </p>
 
                 {/* 3 Featured Projects with Rich UI & Animations */}
                 <div className="space-y-2.5">
-                  
+
                   {/* Project 1: GlobalReach */}
                   <motion.a
                     href="https://www.getyourclientsb2b.com/"
